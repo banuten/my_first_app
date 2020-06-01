@@ -17,29 +17,23 @@ export class BetterHighlightDirective implements OnInit {
 
   @HostBinding("style.backgroundColor") backgroundColor: string;
 
-  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
+  constructor(private elRef: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
-    // this.renderer.setStyle(
-    //   this.elementRef.nativeElement,
-    //   "background-color",
-    //   "blue"
-    // );
     this.backgroundColor = this.defaultColor;
   }
 
-  @HostListener("mouseenter") mouseOver(eventData: Event) {
+  @HostListener("mouseenter") mouseover(eventData: Event) {
     // this.renderer.setStyle(
-    //   this.elementRef.nativeElement,
+    //   this.elRef.nativeElement,
     //   "background-color",
-    //   "blue"
+    //   "lightblue"
     // );
     this.backgroundColor = this.highlightColor;
   }
-
-  @HostListener("mouseleave") mouseLeave(eventData: Event) {
+  @HostListener("mouseleave") mouseleave(eventData: Event) {
     // this.renderer.setStyle(
-    //   this.elementRef.nativeElement,
+    //   this.elRef.nativeElement,
     //   "background-color",
     //   "transparent"
     // );
