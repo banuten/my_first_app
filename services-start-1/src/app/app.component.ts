@@ -7,14 +7,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
-  accounts: {
-    name: string;
-    status: string;
-  }[] = [];
+  accounts: { name: string; status: string }[] = [];
 
-  constructor(private accountsservice: AccountsService) {}
+  constructor(private accountsService: AccountsService) {}
 
   ngOnInit() {
-    this.accounts = this.accountsservice.accounts;
+    this.accounts = this.accountsService.accounts;
   }
 }
