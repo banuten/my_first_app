@@ -30,3 +30,5 @@ The same change (add { static: true } as a second argument) needs to be applied 
 If you DON'T use the selected element in ngOnInit, set static: false instead.
 
 --------------------------------------------
+
+Upto 
