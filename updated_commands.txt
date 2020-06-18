@@ -31,4 +31,4 @@ If you DON'T use the selected element in ngOnInit, set static: false instead.
 
 --------------------------------------------
 
-Upto 
+Upto reactive forms
